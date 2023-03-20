@@ -16,10 +16,9 @@ int main(void)
 			for (k = 0 ; k <= 99 ; k++)
 			putchar((j / 10) + '0');
 			putchar((j % 10) + '0');
-			putchar(' ');
 			putchar((k / 10) + '0');
 			putchar((k % 10) + '0');
-				if (j == 99 && k != 99)
+				if (j == 9 && k != 9)
 				{
 					putchar(',');
 					putchar(' ');
