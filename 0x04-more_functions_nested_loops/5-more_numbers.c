@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- *print_more_numbers - print more numbers
+ *_more_numbers - print more numbers
  *@i: parameter
  * Return: always 0
  */
 
-void print_more_numbers(void)
+void more_numbers(void)
 {
 	int i, j;
 
