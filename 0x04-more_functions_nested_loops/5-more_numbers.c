@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_more_numbers - print more numbers
+ * more_numbers - print more numbers
  *@i: parameter
  * Return: always 0
  */
