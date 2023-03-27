@@ -2,22 +2,21 @@
 
 /**
  * print_rev - function that prints a string, in reverse
- * @s: I've not got a reverse gear
+ * @s: para s
  * Return: always 0 on success
  */
 
 void print_rev(char *s)
-
 {
-	int m = 0;
+	int c = 0;
 
-	while (s[m] != '0')
+	while (s[c] != '\0')
 	{
-	m++;
+	c++;
 	}
-	for (m -= 1; m >= 0; m--)
+	for (c -= 1; c >= 0; c--)
 	{
-	_putchar(s[m]);
+	_putchar(s[c]);
 	}
 	_putchar('\n');
 }
