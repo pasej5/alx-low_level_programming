@@ -10,7 +10,7 @@ void puts2(char *str)
 {
 	int i;
 
-	for (i = 0; str[i] != '\n'; i++)
+	for (i = 0 ; str[i] != '\n' ; i++)
 	{
 		_putchar(str[i]);
 		i++;
