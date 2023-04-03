@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - check the code
@@ -14,7 +15,7 @@ int main(void)
 	char *f = "world";
 	char *t;
 
-	t = _strpbrk(s, f);
+	t = strpbrk(s, f);
 	printf("%s\n", t);
 	return (0);
 }
