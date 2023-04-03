@@ -7,22 +7,16 @@
  * Return: Returns a pointer to the first occurrence of c
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strchr(char *s, char c)
 {
-	unsigned int c = 0;
-	char *t = accept;
+	int i = 0;
 
-	while (*s++)
+	while (s[i] >= '\0')
 	{
-		while (*accept++)
-			if (*(s - 1) == *(accept - 1))
-			{
-				c++;
-				break;
-			}
-		if (!(*--accept))
-			break;
-		accept = t;
+		if (s[i] == c)
+			return (&s[i]);
+		i++;
 	}
-	return (c);
-} 
+	return (0);
+}
+
