@@ -10,6 +10,7 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int _putchar(char c);
 void _puts_recursion(char *s);
+int recursion_loop(int input, int loop);
 
 
 #endif
