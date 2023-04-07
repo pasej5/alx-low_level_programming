@@ -4,6 +4,7 @@
  * recursion_loop - Fuction returning one if is prime
  * @input: input number
  * @loop: loop through numbers
+ * is_prime_number - function
  * Return: 0ne if prime otherwise 0 on success
  */
 
