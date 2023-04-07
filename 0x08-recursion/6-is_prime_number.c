@@ -26,7 +26,7 @@ int recursion_loop(int input, int loop)
 /**
  * is_prime_number - return if prime number
  * @input: input number
- * Retuern:0ne if prime otherwise 0 on success
+ * Return:0ne if prime otherwise 0 on success
  */
 
 int is_prime_number(int input)
