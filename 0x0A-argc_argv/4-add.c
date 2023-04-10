@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 				}
 
 			}
-		for (c = 0; c < argc; c++)
+		for (c = 1; c < argc; c++)
 		{
 		number = atoi(argv[c]);
 		result += number;
