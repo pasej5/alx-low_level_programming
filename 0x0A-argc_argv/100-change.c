@@ -4,14 +4,15 @@
 /**
  * main - this program prints the minimum number of coins to make change
  * @argc: argument count of coins
- * @argv: argument array
- * Return: return 1 if argument passed
+ * @argv: argument array of coins in different amounts
+ * Return: return 1 if the number of argument passed is not 1
  */
 
 int main(int argc, char *argv[])
 {
-	int num, i, result = 0;
+	int result = 0;
 	int coins[] = {25, 10, 5, 2, 1};
+	int i, miniNumber;
 
 	if (argc != 2)
 	{
@@ -19,17 +20,17 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num = atoi(argv[1]);
-	if  (num < 0)
+	miniNumber = atoi(argv[1]);
+	if  (miniNumber < 0)
 	{
 	printf("0\n");
 	return (0);
 	}
-	for (i = 0; i < 5 && num >= 0; i++)
+	for (i = 0; i < 5 && miniNumber >= 0; i++)
 	{
-		while (num >= coins[i])
+		while (miniNumber >= coins[i])
 		{
-			num -= coins[i];
+			miniNumber = miniNumber - coins[i];
 			result++;
 		}
 	}
