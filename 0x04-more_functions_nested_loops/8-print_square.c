@@ -3,40 +3,29 @@
 /**
  * print_square - prints a square, followed by a new line;
  * @size: size of the square
+ * Return: alway 0 on succes
  */
+
 void print_square(int size)
+
 {
+
+	int  size x, y;
+
 	if (size <= 0)
 	{
-		_putchar('\n');
-	} else
-	{
-		int i, j;
-
-		for (i = 0; i < size; i++)
-		{
-			for (j = 0; j < size; j++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
+	_putchar('\n');
 	}
-}
-
-
-8-main.c
-#include "main.h"
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	print_square(2);
-	print_square(10);
-	print_square(0);
-	return (0);
+	else
+	{
+	for (x = 0 ; x < size; x++)
+	{
+	for (y = 0; y < size; y++)
+	{
+	_putchar(35);
+	}
+	_putchar('\n');
+	}
+	}
+	return (0)
 }
