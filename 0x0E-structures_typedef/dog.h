@@ -6,7 +6,7 @@
  * @name: name of the dog
  * @age: dog age
  * @owner: the owner of the dog
- * Return: 0 always
+ * Description: dog details
  */
 
 struct dog
