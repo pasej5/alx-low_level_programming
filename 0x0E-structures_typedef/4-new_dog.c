@@ -1,21 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-
-/**
- * struct dog_structure - a dog struct
- *
- * @name: the dog's name
- * @age: the dog's age
- * @owner: the owner of the dog
- *
- * Description: a struct that holds information about a dog
- */
-typedef struct dog_structure
-{
-	char *name;
-	float age;
-	char *owner;
-} dog_t;
+#include "dog.h"
 
 /**
  * new_dog - creates a new dog structure
