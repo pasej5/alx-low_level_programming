@@ -2,15 +2,15 @@
 #include <string.h>
 
 /**
- * struct dog_s - a dog struct
+ * struct dog_structure - a dog struct
  *
  * @name: the dog's name
  * @age: the dog's age
- * @owner: the dog's owner's name
+ * @owner: the owner of the dog
  *
  * Description: a struct that holds information about a dog
  */
-typedef struct dog_s
+typedef struct dog_structure
 {
 	char *name;
 	float age;
@@ -18,11 +18,11 @@ typedef struct dog_s
 } dog_t;
 
 /**
- * new_dog - creates a new dog with the given name, age, and owner
+ * new_dog - creates a new dog structure
  *
- * @name: the dog's name
- * @age: the dog's age
- * @owner: the dog's owner's name
+ * @name: name of the new dog
+ * @age: age of the new dog
+ * @owner: owner of the dog
  *
  * Return: a pointer to the new dog, or NULL if memory allocation fails
  */
