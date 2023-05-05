@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-#include "reverse_listint.h"
 
 /**
  * main - check the code
