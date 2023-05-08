@@ -10,6 +10,7 @@
  *
  * Return: actual number of letters read and printed, or 0 on failure
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_descriptor;
@@ -39,9 +40,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	buf[byte_numbers_to_be_read] = '\0';
 	byte_numbers_to_be_printed =
-	write(STDOUT_FILENO, buf, byte_numbers_to_be_read);
+		write(STDOUT_FILENO, buf, byte_numbers_to_be_read);
 	if (byte_numbers_to_be_printed == -1 || byte_numbers_to_be_printed !=
-	byte_numbers_to_be_read)
+			byte_numbers_to_be_read)
 	{
 		close(file_descriptor);
 		free(buf);
