@@ -82,7 +82,7 @@ void check100(int check, int fd)
 /**
  * main - opies the content of a file to another file.
  * @argc: number of arguments passed
- * @argv: array of pointers to the arguments
+ * @argv: array  pointers to the arguments
  *
  * Return: 0 on success
  */
@@ -90,7 +90,7 @@ void check100(int check, int fd)
 int main(int argc, char *argv[])
 {
 	int file_descriptor_from, fd_to, close_to, close_from;
-	ssize_t lenr, lenw;
+	ssize_t length1, lenw;
 	char buffer[1024];
 	mode_t file_perm;
 
@@ -100,13 +100,13 @@ int main(int argc, char *argv[])
 	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_perm);
 	check99((ssize_t)fd_to, argv[2], file_descriptor_from, -1);
-	lenr = 1024;
-	while (lenr == 1024)
+	length1 = 1024;
+	while (length1 == 1024)
 	{
-		lenr = read(file_descriptor_from, buffer, 1024);
-		check98(lenr, argv[1], file_descriptor_from, fd_to);
-		lenw = write(fd_to, buffer, lenr);
-		if (lenw != lenr)
+		length1 = read(file_descriptor_from, buffer, 1024);
+		check98(length1, argv[1], file_descriptor_from, fd_to);
+		lenw = write(fd_to, buffer, length1);
+		if (lenw != length1)
 			lenw = -1;
 		check99(lenw, argv[2], file_descriptor_from, fd_to);
 	}
