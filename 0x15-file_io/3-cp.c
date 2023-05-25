@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
- * check97 - checks for the arguments
+ * _to_check97 - checks for the arguments
  * @argc: arguments
  *
  * Return: void
  */
-void check97(int argc)
+void _to_check97(int argc)
 {
 	if (argc != 3)
 	{
@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 	mode_t file_perm;
 
-	check97(argc);
+	_to_check97(argc);
 	file_descriptor_from = open(argv[1], O_RDONLY);
 	check98((ssize_t)file_descriptor_from, argv[1], -1, -1);
 	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
