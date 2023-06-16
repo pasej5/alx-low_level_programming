@@ -11,6 +11,7 @@ int is_prime_number(int n);
 int _putchar(char c);
 void _puts_recursion(char *s);
 int recursion_loop(int input, int loop);
-
+int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
 
 #endif

@@ -20,6 +20,6 @@ int main(void)
 	{'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
 	{'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
 	};
-	print_chessboard(board);
+	printf(board);
 	return (0);
 }
