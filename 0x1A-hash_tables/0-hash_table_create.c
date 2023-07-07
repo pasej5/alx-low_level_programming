@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "hash_tables.h"
 
+/**
+ * hash_table_create - hash table
+ * @size: array size
+ *
+ * Return: apointer to the new hashtable
+ */
+
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *hash_table;
