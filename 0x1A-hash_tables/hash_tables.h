@@ -16,19 +16,22 @@ typedef struct hash_node_s
 	char *key;
 	char *value;
 	struct hash_node_s *next;
-}hash_node_t;
+} hash_node_t;
 
 /**
- * hash_table_s - hash table data structure
+ * struct hash_tables_s - Hash table data structure
  * @size: The size of the array
- * @array: pointer to an an array
+ * @array: Pointer to an array of hash_node_t pointers
+ *
+ * Description: The hash_tables_s struct represents a hash table
+ * data structure. It contains the size of the hash table and an
+ * array of hash_node_t pointers to store the key-value pairs.
  */
-
 typedef struct hash_tables_s
 {
 	unsigned long int size;
 	hash_node_t **array;
-}hash_table_t;
+} hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
