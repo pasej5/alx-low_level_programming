@@ -6,7 +6,7 @@
  * hash_table_get - Retrieves the value associated with the key
  * @ht: the hash table to look into
  * @key: the key you are looking for
- * Returns: the value of the element NULL if key not found
+ * Return: the value of the element NULL if key not found
  */
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
@@ -27,5 +27,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 		temp = temp->next;
 	}
-	Return (NULL);
+	return (NULL);
 }
