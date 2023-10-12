@@ -4,31 +4,35 @@
 
 int jump_search(int *array, size_t size, int value)
 {
-	size_t step = (size_t)sqrt((double)size); /* Cast to double to avoid ISO C90 warning */
-	size_t left = 0;
-	size_t right = step;
-	size_t i;
+    size_t step;
+    size_t left, right, i;
 
-	if (array == NULL)
-		return (-1);
+    if (array == NULL)
+        return (-1);
 
-	while (right < size && array[right] < value)
-	{
-		left = right;
-		right += step;
+    step = (size_t)sqrt((double)size); /* Cast to double to avoid ISO C90 warning */
+    left = 0;
+    right = step;
 
-		printf("Value checked array[%u] = [%d]\n", (unsigned int)right, array[right]); /* Cast to unsigned int to avoid ISO C90 warning */
-	}
+    while (right < size)
+    {
+        if (array[right] >= value)
+            break;
 
-	printf("Value found between indexes [%u] and [%u]\n", (unsigned int)left, (unsigned int)right); /* Cast to unsigned int to avoid ISO C90 warning */
+        left = right;
+        right += step;
 
-	for (i = left; i <= right && i < size; i++)
-	{
-		printf("Value checked array[%u] = [%d]\n", (unsigned int)i, array[i]); /* Cast to unsigned int to avoid ISO C90 warning */
-		if (array[i] == value)
-			return (i);
-	}
+        printf("Value checked array[%lu] = [%d]\n", (unsigned long)right, array[right]);
+    }
 
-	return (-1);
+    printf("Value found between indexes [%lu] and [%lu]\n", (unsigned long)left, (unsigned long)right);
+
+    for (i = left; i <= right && i < size; i++)
+    {
+        printf("Value checked array[%lu] = [%d]\n", (unsigned long)i, array[i]);
+        if (array[i] == value)
+            return (i);
+    }
+
+    return (-1);
 }
-
