@@ -4,7 +4,7 @@
 #include <math.h>
 
 /**
- * jump_search - Searches for a value in an array using jump search algorithm.
+ * jump_search - Searches for a value in an array.
  * @array: Pointer to the first element of the array.
  * @size: The number of elements in the array.
  * @value: The value to search for.
@@ -18,7 +18,10 @@ int jump_search(int *array, size_t size, int value)
 	size_t right = 0;
 	size_t jump = sqrt(size);
 
-	jump = jump > 0 ? jump : 1;  /*Ensure jump is at least 1*/
+	if (jump <= 0)
+	{
+		jump = 1;
+	}
 	if (array == NULL || size == 0)
 		return (-1);
 
