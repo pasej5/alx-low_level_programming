@@ -1,38 +1,55 @@
+#include "search.h"
+#include <stddef.h>
 #include <stdio.h>
 #include <math.h>
-#include "search_algos.h"
+
+/**
+ * jump_search - Searches for a value in an array using jump search algorithm.
+ * @array: Pointer to the first element of the array.
+ * @size: The number of elements in the array.
+ * @value: The value to search for.
+ * Return: The index where `value` is located, or -1 if not found.
+ */
 
 int jump_search(int *array, size_t size, int value)
 {
-    size_t step;
-    size_t left, right, i;
+	size_t i;
+	size_t left = 0;
+	size_t right = 0;
+	size_t jump = sqrt(size);
 
-    if (array == NULL)
-        return (-1);
+	jump = jump > 0 ? jump : 1;  /*Ensure jump is at least 1*/
+	if (array == NULL || size == 0)
+		return (-1);
 
-    step = (size_t)sqrt((double)size); /* Cast to double to avoid ISO C90 warning */
-    left = 0;
-    right = step;
+	printf("Value checked array[%ld] = [%d]\n", right, array[right]);
 
-    while (right < size)
-    {
-        if (array[right] >= value)
-            break;
+	while (right < size && array[right] < value)
+	{
 
-        left = right;
-        right += step;
+		left = right;
+		right += jump;
 
-        printf("Value checked array[%lu] = [%d]\n", (unsigned long)right, array[right]);
-    }
+		if (right < size && array[right] < value)
+		{
+			printf("Value checked array[%ld] = [%d]\n", right, array[right]);
+		}
 
-    printf("Value found between indexes [%lu] and [%lu]\n", (unsigned long)left, (unsigned long)right);
+	}
 
-    for (i = left; i <= right && i < size; i++)
-    {
-        printf("Value checked array[%lu] = [%d]\n", (unsigned long)i, array[i]);
-        if (array[i] == value)
-            return (i);
-    }
+	printf("Value found between indexes [%ld] and [%ld]\n", left, right);
+	if (right >= size)
+	{
+		right = size - 1;
+	}
+	for (i = left; i <= right; i++)
+	{
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+		if (array[i] == value)
+		{
+			return (i);
+		}
 
-    return (-1);
+	}
+	return (-1);
 }
